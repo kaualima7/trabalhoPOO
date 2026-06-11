@@ -1,4 +1,4 @@
-class Time:
+class Clube:
 
     def __init__(self, nome, tecnico):
         self.nome = nome
