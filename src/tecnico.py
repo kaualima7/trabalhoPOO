@@ -3,7 +3,7 @@ from pessoa import Pessoa
 class Tecnico(Pessoa):
 
     def __init__(self, nome, idade, estrategia, anos_experiencia):
-        super().__init__(nome, idade)
+        super().__init__(nome, idade) #superclasse
         self.estrategia = estrategia
         self.anos_experiencia = anos_experiencia
 
