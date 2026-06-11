@@ -1,3 +1,5 @@
 # Trabalho Final POO
 
-Sistema de Gerenciamento de Campeonato de Futebol.
+Criador: Kauã Lima Rodrigues
+
+Sistema de Gerenciamento de Campeonato de Futebol produzido em Python usando Orientação a Objetos.
