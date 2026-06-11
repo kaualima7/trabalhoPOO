@@ -1,7 +1,6 @@
 from jogador import Jogador
 from tecnico import Tecnico
 from clube import Clube
-from partida import Partida
 from campeonato import Campeonato
 
 ##############################################################
@@ -19,7 +18,6 @@ def criar_jogadores(lista_nomes):
             )
         )
     return jogadores
-
 
 nomes_gremio = [
     "Weverton",
@@ -124,14 +122,11 @@ print(f"\n{jogadores_gremio[10].nome} marcou um gol | 89 min - 2º tempo")
 # Partida
 print("\nRegistrando partida...")
 
-partida1 = Partida(gremio, brasil)
-partida1.registrar_resultado(2, 1)
+campeonato.adicionar_partida(gremio, brasil, 2, 1)
 
 print("\n=== PÓS JOGO ===")
 print(f"{gremio.nome}: {gremio.pontos} pontos")
 print(f"{brasil.nome}: {brasil.pontos} pontos")
-
-campeonato.adicionar_partida(partida1)
 
 print("\nResultado:")
 print(f"{gremio.nome} 2 x 1 {brasil.nome}")

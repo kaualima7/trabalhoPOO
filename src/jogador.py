@@ -1,6 +1,5 @@
 from pessoa import Pessoa
 
-
 class Jogador(Pessoa):
     def __init__(self, nome, idade, numero_camisa, posicao):
         super().__init__(nome, idade)

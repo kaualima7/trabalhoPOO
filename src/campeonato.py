@@ -1,3 +1,5 @@
+from partida import Partida
+
 class Campeonato:
 
     def __init__(self, nome):
@@ -20,7 +22,9 @@ class Campeonato:
     def adicionar_time(self, time):
         self._times.append(time)
 
-    def adicionar_partida(self, partida):
+    def adicionar_partida(self, time_casa, time_visitante, gols_casa, gols_visitante):
+        partida = Partida(time_casa, time_visitante)
+        partida.registrar_resultado(gols_casa, gols_visitante)
         self._partidas.append(partida)
 
     def mostrar_tabela(self):
