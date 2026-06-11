@@ -4,7 +4,7 @@ from clube import Clube
 from partida import Partida
 from campeonato import Campeonato
 
-
+##############################################################
 #Função pra criar lista dos jogadores
 def criar_jogadores(lista_nomes):
     jogadores = []
@@ -53,7 +53,7 @@ print(" SISTEMA DA COPA AMISTOSA ")
 print("===================================")
 
 ##############################################################
-# Técnicos
+#Técnicos
 print("\nCriando técnicos...")
 
 tecnico_gremio = Tecnico(
@@ -74,7 +74,7 @@ print(tecnico_gremio.apresentar())
 print(tecnico_brasil.apresentar())
 
 ##############################################################
-# Clube/Seleção
+#Clube/Seleção
 print("Criando clubes...")
 
 gremio = Clube(
@@ -104,7 +104,8 @@ print("\n=== ELENCOS ===")
 gremio.mostrar_elenco()
 brasil.mostrar_elenco()
 
-# Campeonato
+##############################################################
+#Campeonato
 print("\nCriando campeonato...")
 
 campeonato = Campeonato("Copa Amistosa")
@@ -118,27 +119,28 @@ print(f"{brasil.nome}: {brasil.pontos} pontos")
 
 jogadores_gremio[9].fazer_gol()
 print(
-    f"\n{jogadores_gremio[9].nome} marcou um gol!"
+    f"\n{jogadores_gremio[9].nome} marcou um gol | 11 min - 1º tempo"
 )
 
 jogadores_brasil[5].fazer_gol()
 print(
-    f"\n{jogadores_brasil[5].nome} marcou um gol"
+    f"\n{jogadores_brasil[5].nome} marcou um gol | 26 min - 1º tempo"
 )
 
 jogadores_gremio[10].fazer_gol()
 print(
-    f"\n{jogadores_gremio[10].nome} marcou um gol"
+    f"\n{jogadores_gremio[10].nome} marcou um gol | 89 min - 2º tempo"
 )
 
-# Partida
+##############################################################
+#Partida
 print("\nRegistrando partida...")
 
 partida1 = Partida(gremio, brasil)
 
 partida1.registrar_resultado(2, 1)
 
-print("\n=== DEPOIS DA PARTIDA ===")
+print("\n=== PÓS JOGO ===")
 print(f"{gremio.nome}: {gremio.pontos} pontos")
 print(f"{brasil.nome}: {brasil.pontos} pontos")
 
@@ -147,10 +149,12 @@ campeonato.adicionar_partida(partida1)
 print("\nResultado:")
 print(f"{gremio.nome} 2 x 1 {brasil.nome}")
 
-# Tabela
+##############################################################
+#Tabela
 campeonato.mostrar_tabela()
 
-# Campeão
+##############################################################
+#Campeão
 campeao = campeonato.definir_campeao()
 
 print("\n=== CAMPEÃO ===")
